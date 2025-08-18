@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GitHub Repos Autocomplete</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="autocomplete" id="autocomplete">
+      <label for="search" class="visually-hidden">Поиск репозиториев GitHub</label>
+      <input
+        id="search"
+        class="input"
+        type="text"
+        placeholder="Начните вводить название репозитория…"
+        autocomplete="off"
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-controls="suggestions-list"
+        role="combobox"
+      />
+
+      <ul id="suggestions-list" class="suggestions" role="listbox" aria-label="Подсказки"></ul>
+      <div class="help">Введите запрос. Показаны первые 5 результатов. Нажмите на репозиторий, чтобы добавить ниже.</div>
+    </div>
+
+    <section class="added" aria-live="polite" aria-label="Добавленные репозитории">
+      <h2 class="subtitle">Добавленные репозитории</h2>
+      <ul id="added-list" class="added-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
